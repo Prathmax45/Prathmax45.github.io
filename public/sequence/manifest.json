@@ -1,0 +1,22 @@
+{
+  "frameCount": 144,
+  "width": 1200,
+  "height": 676,
+  "format": "webp",
+  "pattern": "frame-{index}.webp",
+  "indexDigits": 3,
+  "totalBytes": 1036228,
+  "fps": 24,
+  "poster": "poster.webp",
+  "startSeconds": 0.2,
+  "durationSeconds": 6,
+  "source": {
+    "title": "ISS Expedition 42 Time Lapse Video of Earth",
+    "creator": "NASA/JSC",
+    "page": "https://science.nasa.gov/resource/iss-expedition-42-time-lapse-video-of-earth/",
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/lunar-science/2023/09/jsc2015m000273_orig.mp4",
+    "usage": "NASA media: informational and personal website use permitted under NASA media guidelines.",
+    "usageUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+  },
+  "provenance": "Frames extracted from actual NASA/JSC ISS time-lapse imagery. Not original portfolio project footage. No AI-generated images."
+}

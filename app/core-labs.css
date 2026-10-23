@@ -1,0 +1,51 @@
+/* Alternate hero instruments; orbital geometry and the approved identity stay untouched. */
+.core-panel[data-mode=mesh] canvas { border-radius:0; height:355px; cursor:grab; }
+.core-panel[data-mode=mesh] canvas:active { cursor:grabbing; }
+.mesh-route { display:flex; flex-wrap:wrap; align-items:center; gap:14px; border-top:1px solid #66517a60; border-bottom:1px solid #66517a60; padding:14px 4px; font:13px/1.5 var(--font-mono),monospace; }
+.mesh-route>span:first-child { color:var(--muted); font-size:13px; }
+.mesh-route output { color:var(--cyan); min-width:0; overflow-wrap:anywhere; flex:1 1 140px; }
+.mesh-rx { color:var(--accent); margin-left:auto; white-space:nowrap; }
+.mesh-form { display:grid; grid-template-columns:1fr 1fr; gap:20px; padding:18px 0 22px; }
+.mesh-form label { display:grid; gap:8px; font-size:14px; color:var(--muted); }
+.mesh-form select,.byte-clock select { border:0; border-bottom:1px solid var(--line); background:transparent; color:var(--ink); font:13px var(--font-mono),monospace; padding:10px 0; min-height:44px; max-width:100%; }
+.mesh-form .relay-offline { display:flex; align-items:center; min-height:44px; gap:10px; }
+.relay-offline input { width:22px; height:22px; accent-color:var(--pink); }
+.mesh-form input[type=range] { width:100%; accent-color:var(--cyan); min-height:30px; }
+.mesh-lab .core-hint,.byte-lab .core-hint { text-align:left; padding:14px 4px; line-height:1.6; min-height:62px; }
+.mesh-lab .core-settings,.byte-lab .core-settings { margin-left:0; margin-right:0; }
+.mesh-lab .core-controls { padding-left:0; padding-right:0; }
+.core-panel[data-mode=signal] canvas { border-radius:0; height:112px; cursor:default; }
+.byte-lab { container-type:inline-size; padding:20px 4px 0; }
+.byte-value { display:flex; align-items:center; justify-content:space-between; padding:0 6px 22px; gap:24px; }
+.byte-value>div:first-child>span { font:13px var(--font-mono),monospace; color:var(--muted); letter-spacing:.04em; }
+.byte-value strong { display:block; font:700 76px/1.1 var(--font-display),sans-serif; letter-spacing:-.07em; color:var(--ink); }
+.byte-equivalents { display:flex; flex-wrap:wrap; gap:18px; max-width:225px; }
+.byte-equivalents>span { display:flex; align-items:center; gap:9px; font:13px var(--font-mono),monospace; color:var(--muted); min-height:28px; }
+.byte-equivalents b { font-size:22px; font-weight:400; color:var(--cyan); min-width:1ch; }
+.byte-equivalents .byte-carry b { color:var(--muted); }
+.byte-equivalents .byte-carry.active b { color:var(--pink); }
+.byte-register { display:grid; grid-template-columns:repeat(8,minmax(0,1fr)); gap:6px; touch-action:pan-y; }
+.byte-register button { min-width:0; min-height:106px; padding:12px 2px 10px; display:flex; flex-direction:column; justify-content:space-between; align-items:center; background:#171428; border:1px solid #574366; color:var(--muted); transition:background .15s,color .15s,border-color .15s; touch-action:pan-y; }
+.byte-register button[data-on=true] { background:#173133; border-color:#77f0ef88; color:var(--cyan); }
+.byte-register button:hover { border-color:var(--pink); }
+.byte-register button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.bit-address,.bit-weight { font:13px var(--font-mono),monospace; }
+.byte-register strong { font:400 32px/1 var(--font-mono),monospace; }
+.byte-register .bit-weight { color:var(--muted); }
+.byte-register button[data-on=true] .bit-weight { color:var(--cyan); }
+.byte-clock { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:18px 4px 4px; }
+.byte-clock label { display:flex; align-items:center; gap:12px; font-size:13px; color:var(--muted); }
+.byte-clock select { min-width:125px; color:var(--cyan); }
+.clock-button { background:var(--accent); color:var(--bg); font:600 13px var(--font-mono),monospace; min-height:44px; padding:12px 20px; display:flex; align-items:center; gap:18px; }
+.clock-button:hover { background:var(--cyan); }
+.byte-lab .byte-readout { padding:12px 0; flex-wrap:wrap; }
+.byte-lab .byte-readout input { width:85px; }
+.byte-readout>button { background:var(--panel); color:var(--ink); font-size:13px; min-height:44px; padding:12px; }
+.byte-register[data-tick='0'] button[data-changed=true] { animation:bit-clock-a .28s ease-out; }
+.byte-register[data-tick='1'] button[data-changed=true] { animation:bit-clock-b .28s ease-out; }
+@keyframes bit-clock-a { from{transform:translateY(3px) scale(.96)}to{transform:translateY(0) scale(1)} }
+@keyframes bit-clock-b { from{transform:translateY(3px) scale(.96)}to{transform:translateY(0) scale(1)} }
+@container(max-width:430px){.byte-register{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.byte-register button{min-height:78px;padding:8px}.byte-register strong{font-size:28px}.byte-value{padding-bottom:18px}.byte-value strong{font-size:64px}.byte-equivalents{max-width:150px;gap:4px 14px}.byte-equivalents b{font-size:19px}.byte-clock{gap:12px}.byte-clock label{gap:8px}.clock-button{gap:12px;padding:12px 14px}}
+@media(max-width:1000px) and (min-width:701px){.core-panel[data-mode=mesh] canvas{height:320px}.mesh-route{gap:9px;flex-wrap:wrap}.mesh-route>span:first-child{display:none}.byte-clock label{display:grid;gap:0}.mesh-form{grid-template-columns:1fr}.core-panel[data-mode=signal] .panel-bar>span{font-size:13px}}
+@media(max-width:700px){.core-panel[data-mode=mesh] canvas{height:330px}.mesh-route{gap:10px}.mesh-route>span:first-child{font-size:13px}.mesh-route output{font-size:13px}.mesh-rx{font-size:13px}.byte-lab{padding-left:0;padding-right:0}.mesh-lab .core-hint,.byte-lab .core-hint{padding-left:0;padding-right:0}.byte-clock select{min-width:115px}}
+@media(prefers-reduced-motion:reduce){.byte-register button{animation:none!important;transition:none}}

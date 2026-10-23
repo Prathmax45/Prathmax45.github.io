@@ -1,0 +1,160 @@
+/* Approved hero stays in kernel.css. Everything below it is a live physics expedition. */
+.physics-expedition { --experiment-bg:#070911; background:var(--bg); overflow:clip; }
+.expedition-chapter { padding:100px var(--gutter); scroll-margin-top:15px; }
+.physics-expedition h2 { font-size:clamp(46px,6.9vw,104px); line-height:1; letter-spacing:-.065em; margin:0; text-wrap:balance; }
+.physics-expedition h2 em { font-style:normal; color:var(--accent); }
+.chapter-number,.chapter-coordinate { font:13px/1.5 var(--font-mono),monospace; letter-spacing:.06em; color:var(--muted); }
+.chapter-number { margin:0 0 24px; }
+.chapter-entry { display:flex; justify-content:space-between; gap:30px; padding:0 0 28px; border-bottom:1px solid var(--line); font:13px/1.6 var(--font-mono),monospace; color:var(--muted); margin-bottom:80px; }
+.chapter-coordinate { color:var(--accent); }
+.chapter-entry>span:last-child { max-width:42ch; text-align:right; }
+.chapter-heading { display:flex; justify-content:space-between; align-items:end; gap:40px; margin-bottom:38px; }
+.chapter-heading>p { font-size:17px; line-height:1.8; color:var(--muted); margin:0 0 3px; }
+.interaction-invitation { color:var(--ink); }
+.gravity-chapter { padding-top:50px; }
+.physics-stage { position:relative; min-width:0; background:var(--experiment-bg); }
+.experiment-toolbar { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 20px; font:13px var(--font-mono),monospace; color:var(--muted); border-bottom:1px solid #47425970; }
+.experiment-toolbar>span { display:flex; align-items:center; gap:9px; }
+.experiment-toolbar i { display:inline-block; width:6px; height:6px; border-radius:100%; background:var(--accent); }
+.experiment-toolbar button { min-height:44px; min-width:70px; padding:8px; color:var(--ink); background:transparent; font-size:13px; }
+.physics-stage canvas { display:block; width:100%; height:560px; cursor:crosshair; touch-action:pan-y; }
+.physics-stage canvas:focus-visible { outline:2px solid var(--accent); outline-offset:-2px; }
+.physics-gravity { margin-left:calc(-1 * var(--gutter)); margin-right:calc(-1 * var(--gutter)); }
+.physics-gravity .experiment-toolbar { padding-left:var(--gutter); padding-right:var(--gutter); }
+.physics-gravity canvas { height:590px; }
+.experiment-caption { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; padding:18px 20px; border-top:1px solid #47425970; }
+.experiment-caption p { color:var(--muted); font-size:16px; margin:0; }
+.experiment-caption output { font:13px/1.6 var(--font-mono),monospace; color:var(--accent); white-space:nowrap; }
+.physics-gravity .experiment-caption,.physics-gravity .experiment-controls { padding-left:var(--gutter); padding-right:var(--gutter); }
+.experiment-controls { padding:0 20px 12px; }
+.experiment-controls summary { min-height:44px; display:flex; align-items:center; justify-content:space-between; gap:18px; width:fit-content; cursor:pointer; color:var(--muted); font:13px var(--font-mono),monospace; list-style:none; }
+.experiment-controls summary span { color:var(--cyan); font-size:20px; }
+.experiment-controls[open] summary { color:var(--ink); }
+.experiment-control-grid { display:flex; align-items:center; flex-wrap:wrap; gap:20px 30px; padding:12px 0 20px; }
+.experiment-control-grid>p { flex:1 0 100%; max-width:75ch; font-size:16px; color:var(--muted); line-height:1.7; margin:0; }
+.experiment-control-grid label { font-size:16px; display:flex; flex-wrap:wrap; align-items:center; gap:14px; min-width:210px; min-height:44px; color:var(--ink); }
+.experiment-control-grid label .control-value { margin-left:auto; color:var(--cyan); font:13px var(--font-mono),monospace; }
+.experiment-control-grid input[type=range] { width:100%; accent-color:var(--cyan); height:28px; cursor:ew-resize; }
+.experiment-control-grid input[type=checkbox] { height:22px; width:22px; accent-color:var(--cyan); }
+.experiment-control-grid button { background:#25283a; color:var(--ink); padding:12px 16px; min-height:44px; font-size:16px; border:1px solid #4c4e68; }
+.experiment-control-grid button:hover { color:var(--accent); border-color:var(--accent); }
+.experiment-buttons { display:flex; flex-wrap:wrap; gap:12px; }
+.experiment-proof { display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,9vw,180px); margin:36px 0 20px; }
+.experiment-proof p { margin:0; font-size:16px; line-height:1.7; max-width:47ch; color:var(--muted); }
+.experiment-proof span { display:block; font:13px var(--font-mono),monospace; color:var(--accent); margin-bottom:14px; }
+.experiment-proof a { display:block; min-width:0; }
+.experiment-proof strong { font-family:var(--font-display),sans-serif; font-size:clamp(22px,2.4vw,34px); font-weight:600; display:block; line-height:1.2; }
+.experiment-proof b { font-weight:400; color:var(--accent); }
+.experiment-proof small { font-size:16px; color:var(--muted); display:block; margin-top:10px; }
+.model-note { color:var(--muted); font-size:13px; line-height:1.7; max-width:75ch; margin:26px 0 0; }
+.wave-chapter { background:#0c1521; padding-top:110px; padding-bottom:80px; }
+.wave-layout { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr); gap:5%; align-items:center; }
+.wave-editorial h2 em { color:var(--cyan); }
+.wave-editorial>p:not(.chapter-number) { font-size:17px; line-height:1.8; color:var(--muted); margin:30px 0; }
+.wave-legend { display:flex; gap:28px; font:13px var(--font-mono),monospace; }
+.wave-legend span,.chaos-legend span { display:flex; align-items:center; gap:8px; }
+.wave-legend i,.chaos-legend i { width:16px; height:3px; background:var(--cyan); }
+.wave-legend span:nth-child(2) i { background:var(--pink); }
+.wave-editorial .wave-question { max-width:22ch; font-size:24px!important; color:var(--ink)!important; line-height:1.4!important; margin-top:40px!important; }
+.expedition-link { display:inline-flex; align-items:center; min-height:44px; font-size:16px; color:var(--cyan); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:7px; }
+.wave-instrument { min-width:0; }
+.physics-wave canvas { height:470px; }
+.wave-footnote { display:grid; grid-template-columns:1fr 1.3fr; align-items:start; gap:24px; margin-top:24px; }
+.wave-footnote>span { font:20px/1.5 var(--font-mono),monospace; color:var(--cyan); white-space:nowrap; }
+.wave-footnote p { color:var(--muted); font-size:16px; line-height:1.7; margin:0; }
+.chaos-chapter { background:radial-gradient(ellipse at 80% 50%,#40204555,transparent 60%),#150e20; padding-top:110px; }
+.chaos-layout { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:7%; align-items:center; }
+.chaos-editorial h2 { font-size:clamp(46px,6.4vw,94px); }
+.chaos-editorial h2 em { color:var(--pink); }
+.chaos-editorial>p:not(.chapter-number):not(.epsilon-number) { color:var(--muted); font-size:16px; line-height:1.8; max-width:39ch; }
+.epsilon-number { font-family:var(--font-display),sans-serif; font-size:clamp(64px,8vw,120px); letter-spacing:-.07em; color:var(--pink); line-height:1.1; margin:28px 0; }
+.epsilon-number>span { display:block; font:13px/1.5 var(--font-mono),monospace; letter-spacing:.03em; color:var(--muted); margin-top:10px; }
+.physics-chaos canvas { height:530px; }
+.chaos-legend { font:13px/1.6 var(--font-mono),monospace; display:flex; flex-wrap:wrap; gap:14px 25px; color:var(--muted); margin-top:22px; }
+.chaos-legend span:first-child i { background:var(--pink); }
+.chaos-legend span:last-child { flex-basis:100%; }
+.physics-method { margin-top:28px; border-top:1px solid #705477; padding-top:10px; font-size:16px; color:var(--muted); }
+.physics-method summary { color:var(--ink); cursor:pointer; padding:14px 0; min-height:44px; }
+.physics-method p { line-height:1.8; }.physics-method a{color:var(--cyan);display:inline-flex;min-height:44px;align-items:center;}
+.source-chapter { padding-top:120px; padding-bottom:100px; }
+.source-intro { display:grid; grid-template-columns:1fr 1fr; gap:10px 70px; margin-bottom:60px; align-items:end; }
+.source-intro .chapter-number { grid-column:1/-1; }
+.source-intro h2 { font-size:clamp(46px,6vw,86px); }
+.source-intro>p:last-child { font-size:20px; color:var(--muted); line-height:1.6; }
+.source-row { display:grid; grid-template-columns:35px 105px minmax(0,1fr) auto; align-items:center; gap:28px; border-top:1px solid var(--line); padding:30px 0; }
+.source-number,.source-language,.source-github { font:13px/1.5 var(--font-mono),monospace; color:var(--muted); }
+.source-photo { overflow:hidden; display:block; height:90px; }
+.source-photo img { width:100%; height:100%; object-fit:cover; filter:saturate(.6); transition:filter .3s,transform .3s; }
+.source-row:hover img { filter:saturate(1); transform:scale(1.08); }
+.source-row h3 { font-size:clamp(24px,2.6vw,37px); margin:8px 0; }
+.source-row h3 span { color:var(--accent); }
+.source-row p { font-size:16px; color:var(--muted); margin:0; line-height:1.6; }
+.source-github { color:var(--cyan); padding:14px 4px; }
+.human-chapter { border-top:1px solid var(--line); display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:9%; }
+.human-chapter h2 { font-size:clamp(42px,4.5vw,64px); letter-spacing:-.055em; }
+.human-chapter h2 em { color:var(--violet); }
+.human-statement { font-size:20px; line-height:1.7; max-width:40ch; color:var(--muted); margin:30px 0; }
+.human-notes { display:grid; gap:32px; }
+.human-notes article>span,.human-notes>div>span { font:13px var(--font-mono),monospace; color:var(--violet); }
+.human-notes h3 { font-size:25px; line-height:1.3; margin:12px 0 8px; }
+.human-notes p { font-size:16px; color:var(--muted); line-height:1.7; margin:0; }
+.human-notes .tool-sentence { font-size:18px; line-height:2; color:var(--ink); margin-top:10px; }
+.tool-sentence i { font-style:normal; color:var(--violet); padding:0 4px; }
+.field-notes { background:#11111b; }
+.notes-heading { display:flex; align-items:end; gap:35px; flex-wrap:wrap; margin-bottom:45px; }
+.notes-heading .chapter-number { flex-basis:100%; margin-bottom:0; }
+.notes-heading h2 { font-size:clamp(44px,5.2vw,76px); }
+.notes-heading h2 em { color:var(--cyan); }
+.notes-heading>p:last-child { font-size:16px; color:var(--muted); line-height:1.6; margin:0 0 0 auto; }
+.field-note { border-top:1px solid #4b455c; }
+.field-note:last-child { border-bottom:1px solid #4b455c; }
+.field-note>summary { display:flex; align-items:center; gap:22px; min-height:100px; cursor:pointer; list-style:none; padding:22px 0; }
+.field-note>summary>span { font:13px var(--font-mono),monospace; color:var(--muted); }
+.field-note>summary h3 { margin:0; font-size:clamp(21px,2.8vw,34px); }
+.field-note>summary>span:nth-of-type(2) { margin-left:auto; text-align:right; max-width:24ch; line-height:1.6; }
+.field-note>summary b { color:var(--cyan); font-size:26px; font-weight:400; width:20px; }
+.field-note[open]>summary b { transform:rotate(45deg); }
+.field-note>summary:hover h3 { color:var(--cyan); }
+.note-content { padding:10px 0 40px; min-width:0; }
+.satellite-note { max-width:900px; margin:auto; }
+.film-note .story { height:180svh; padding:0; margin:0; }
+.film-note .story-sticky { padding:30px 0 10px; }
+.film-note .story-title { margin-bottom:20px; }
+.film-note .story-title h2 { font-size:clamp(24px,3vw,42px); }
+.film-note .story-title h2 br { display:none; }
+.film-note .story-media { margin-left:0; margin-right:0; }
+.film-note .story-caption h3 { font-size:clamp(24px,3vw,38px); }
+.film-note .story-bottom { margin-top:16px; }
+.shell-chapter { display:grid; grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr); gap:6%; align-items:start; }
+.shell-intro h2 { font-size:clamp(40px,4.4vw,64px); line-height:1.1; }
+.shell-intro h2 em { color:var(--pink); }
+.shell-intro>p:last-child { font-size:17px; color:var(--muted); line-height:1.7; margin-top:25px; }
+.shell-intro code { color:var(--cyan); }
+.shell-chapter .terminal { margin:0; min-width:0; }
+.physics-expedition .terminal-log { height:230px; }
+.physics-expedition .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+@media(min-width:1600px){.physics-gravity canvas{height:660px}.physics-wave canvas{height:540px}}
+@media(max-width:1100px){
+ .expedition-chapter{padding-top:75px;padding-bottom:75px}.gravity-chapter{padding-top:30px}.chapter-entry{margin-bottom:50px}.chapter-heading{align-items:start}.chapter-heading>p{max-width:32ch;font-size:16px}.wave-layout{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:30px}.physics-wave canvas{height:430px}.wave-footnote{grid-template-columns:1fr}.chaos-layout{gap:35px}.physics-chaos canvas{height:480px}.human-chapter{gap:40px}.shell-chapter{grid-template-columns:1fr}.shell-intro{margin-bottom:35px;max-width:750px}.shell-intro h2{font-size:50px}.shell-intro>p:last-child{margin:20px 0}.physics-expedition .terminal-log{height:220px}
+}
+@media(max-width:800px){
+ .chapter-heading{display:block}.chapter-heading>p{margin-top:25px;max-width:none}.chapter-heading>p br{display:none}.chapter-heading>p br::after{content:' '}.interaction-invitation{display:block}.physics-expedition h2{font-size:clamp(46px,8.8vw,70px)}.physics-gravity canvas{height:480px}.wave-layout{grid-template-columns:1fr}.wave-editorial h2 br{display:none}.wave-editorial h2 br::after{content:' '}.wave-editorial>p:not(.chapter-number){margin:24px 0}.wave-editorial .wave-question{font-size:20px!important;margin-top:25px!important;max-width:none}.wave-editorial{padding-bottom:10px}.wave-legend{margin:24px 0}.wave-footnote{grid-template-columns:1fr 1.5fr}.wave-instrument{width:100%}.chaos-layout{display:flex;flex-direction:column-reverse;gap:35px}.chaos-instrument,.chaos-editorial{width:100%}.chaos-editorial h2 br{display:none}.chaos-editorial h2 br::after{content:' '}.epsilon-number{font-size:88px;margin:25px 0}.chaos-editorial>p:not(.chapter-number):not(.epsilon-number){max-width:60ch}.physics-chaos canvas{height:500px}.human-chapter{grid-template-columns:1fr}.human-notes{grid-template-columns:1fr 1fr;gap:35px}.human-notes>div{grid-column:1/-1}.source-row{gap:20px;grid-template-columns:24px 85px minmax(0,1fr) auto}.source-photo{height:80px}.source-row h3{font-size:25px}.source-intro{gap:15px 40px}.notes-heading>p:last-child{margin:0}.field-note>summary>span:nth-of-type(2){display:none}
+}
+@media(max-width:500px){
+ .expedition-chapter{padding:60px 20px}.gravity-chapter{padding-top:25px}.chapter-entry{margin-bottom:45px;padding-bottom:20px}.chapter-entry>span:last-child{display:none}.chapter-entry .chapter-coordinate{font-size:13px}.chapter-number{font-size:13px;margin-bottom:20px}.physics-expedition h2{font-size:46px;line-height:1.04}.chapter-heading{margin-bottom:28px}.chapter-heading>p{font-size:16px;line-height:1.7}.physics-gravity{margin-left:-20px;margin-right:-20px}.physics-gravity canvas{height:400px}.experiment-toolbar{padding:8px 14px}.experiment-toolbar>span{font-size:13px}.physics-gravity .experiment-toolbar{padding-left:20px;padding-right:20px}.experiment-caption{gap:12px;padding:15px 14px;align-items:start}.experiment-caption p{font-size:13px;line-height:1.6;max-width:34ch}.experiment-caption output{font-size:13px}.experiment-controls{padding-left:14px;padding-right:14px}.experiment-controls summary{font-size:13px}.experiment-control-grid label{width:100%}.experiment-proof{grid-template-columns:1fr;gap:28px;margin-top:30px}.experiment-proof strong{font-size:25px}.experiment-proof p{font-size:16px}.experiment-proof span{font-size:13px}.model-note{font-size:13px}.physics-wave canvas{height:360px}.wave-footnote{grid-template-columns:1fr;gap:12px}.wave-editorial>p:not(.chapter-number){font-size:16px}.wave-editorial .wave-question{font-size:20px!important}.wave-footnote>span{font-size:20px}.wave-footnote p{font-size:16px}.epsilon-number{font-size:86px}.physics-chaos canvas{height:400px}.chaos-legend{font-size:13px;gap:14px 24px}.chaos-editorial>p:not(.chapter-number):not(.epsilon-number){font-size:16px}.source-intro{display:block;margin-bottom:35px}.source-intro h2{margin-bottom:24px}.source-intro>p:last-child{font-size:17px}.source-row{grid-template-columns:24px minmax(0,1fr) auto;gap:12px;padding:24px 0}.source-photo{display:none}.source-language{font-size:13px}.source-row h3{font-size:23px;line-height:1.2;margin:10px 0}.source-row p{font-size:16px}.source-github{font-size:13px;align-self:start}.source-number{font-size:13px;align-self:start}.source-row>div{min-width:0}.human-chapter h2{font-size:38px}.human-statement{font-size:18px;margin:24px 0}.human-notes{grid-template-columns:1fr;gap:30px}.human-notes>div{grid-column:auto}.human-notes h3{font-size:25px}.human-notes .tool-sentence{font-size:16px;line-height:2}.notes-heading{gap:20px;margin-bottom:28px}.notes-heading>p:last-child{font-size:16px}.field-note>summary{gap:14px;min-height:90px}.field-note>summary h3{font-size:22px;flex:1}.field-note>summary>span{font-size:13px}.field-note>summary b{font-size:24px}.film-note .story-sticky{padding-top:20px}.film-note .story-title{flex-direction:column;gap:14px}.film-note .story-title h2{font-size:27px}.film-note .story-title h2 br{display:none}.film-note .story-title a{width:auto}.film-note .story-bottom{font-size:13px}.film-note .story-caption{top:20px;left:16px}.film-note .story-caption h3{font-size:25px}.film-note .story-caption p{font-size:16px}.shell-intro h2{font-size:42px}.shell-chapter .terminal-log{height:230px}.shell-chapter .terminal-log pre{font-size:13px}.shell-chapter .terminal form{gap:6px;padding:14px 8px}.shell-chapter .terminal label{font-size:13px}.shell-chapter .terminal form button{font-size:13px;padding:12px 8px}
+}
+@media(max-width:800px){
+ .wave-layout,.chaos-layout{display:flex;flex-direction:column;gap:0}
+ .wave-editorial,.chaos-editorial{display:contents}
+ .wave-editorial .chapter-number,.chaos-editorial .chapter-number{order:0;align-self:start}
+ .wave-editorial h2,.chaos-editorial h2{order:1;align-self:start;margin-bottom:30px}
+ .wave-instrument,.chaos-instrument{order:2;width:100%}
+ .wave-editorial>p:not(.chapter-number){order:3;align-self:start}
+ .wave-legend{order:4;align-self:start}
+ .wave-editorial .wave-question{order:5;margin-top:6px!important}
+ .wave-editorial .expedition-link{order:6;align-self:start}
+ .chaos-editorial .epsilon-number{order:3;align-self:start;margin:35px 0 24px}
+ .chaos-editorial>p:not(.chapter-number):not(.epsilon-number){order:4;align-self:start;margin-bottom:16px}
+ .chaos-editorial .physics-method{order:5;width:100%}
+}
+@media(prefers-reduced-motion:reduce){.film-note .story{height:auto}.source-photo img{transition:none}}
