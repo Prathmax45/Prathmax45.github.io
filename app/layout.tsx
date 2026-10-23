@@ -5,6 +5,7 @@ import './globals.css';
 import './kernel.css';
 import './expedition.css';
 import './core-labs.css';
+import './discoveries.css';
 const display = localFont({ src: '../public/fonts/syne.ttf', variable: '--font-display', display: 'swap', weight: '400 800' });
 const sans = localFont({ src: '../public/fonts/space.ttf', variable: '--font-sans', display: 'swap', weight: '300 700' });
 const mono = localFont({ src: '../public/fonts/jetbrains.ttf', variable: '--font-mono', display: 'swap', weight: '100 800' });

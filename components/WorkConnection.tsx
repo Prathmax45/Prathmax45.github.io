@@ -1,0 +1,19 @@
+import Link from 'next/link';
+const connections={
+ orbit:{title:'My curiosity starts with motion.',text:'In my C++ Orbital Mechanics Engine, I model gravitational motion with a custom 3D vector system and velocity Verlet integration.',href:'/work/orbital-mechanics/',link:'Explore my C++ project'},
+ mesh:{title:'I like looking beneath the interface.',text:'My 8-bit virtual computer is written in C. It explores the instructions, registers and memory underneath a working system. This packet network is a separate browser analogy.',href:'/work/virtual-computer/',link:'Look inside my virtual computer'},
+ byte:{title:'Small bits. A deeper understanding.',text:'Building a virtual computer in C is part of how I explore the machinery underneath software. This register makes that interest something you can touch.',href:'/work/virtual-computer/',link:'See the C project'},
+ gravity:{title:'I build models, then inspect them.',text:'My orbital engine records position, velocity, acceleration and energy. I’m interested in checking what a numerical model is doing as well as making it move.',href:'/work/orbital-mechanics/',link:'Follow the implementation'},
+ magnet:{title:'I code physical ideas.',text:'My DPDL project connects Lagrangian descriptions, symbolic derivation in SymPy and physics-informed neural networks in PyTorch. This magnetic experiment is a separate numerical model of that broader curiosity.',href:'/work/dpdl/',link:'Explore DPDL'},
+ tumble:{title:'I chase the unexpected.',text:'My C++ orbital project uses custom vectors and numerical integration. Here I extend that interest into a separate rigid-body experiment: the same object behaves differently when you change its spin axis.',href:'/work/orbital-mechanics/',link:'See my computational physics work'},
+ cpu:{title:'This is why I built a computer from the inside.',text:'My C virtual computer explores how instructions become changes in registers and memory. This small LOAD → ADD → SEND sequence explains that interest; it is not the complete C emulator.',href:'/work/virtual-computer/',link:'Explore my virtual computer'},
+ satellite:{title:'My interests reach beyond the screen.',text:'I work in software and frontend engineering at Siemens Technology and Services, while independently exploring physical systems and numerical models. This CubeSat is an interactive concept, not a claimed hardware build.',href:'#mission',link:'Meet the engineer'},
+ footage:{title:'A wider perspective, the same curiosity.',text:'My work spans a small virtual computer, an orbital engine and a physics descriptor language. Moving between those scales is part of what makes systems interesting to me.',href:'#source-index',link:'Explore the work behind this site'},
+ terminal:{title:'Interfaces are part of my engineering practice.',text:'I work in software and frontend engineering at Siemens Technology and Services. This local command interface is another way to explore my verified projects and background.',href:'#mission',link:'Read my background'},
+ activity:{title:'The work continues in the open.',text:'My public repositories include C systems programming, C++ orbital mechanics, Python scientific software and a FastAPI resume-analysis tool.',href:'https://github.com/Prathmax45',link:'Visit my GitHub'}
+} as const;
+export type ConnectionTopic=keyof typeof connections;
+export default function WorkConnection({topic,event,compact=false}:{topic:ConnectionTopic;event?:string;compact?:boolean}){
+ const c=connections[topic];
+ return <aside className={`work-connection${compact?' compact':''}`} data-active={!!event} aria-label="How this connects to my work"><p className="connection-trigger" aria-live="polite">{event||'The person behind the interaction'}</p><h3>{c.title}</h3><p>{c.text}</p><Link href={c.href}>{c.link} <span aria-hidden="true">↗</span></Link></aside>;
+}

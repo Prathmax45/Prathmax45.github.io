@@ -1,4 +1,5 @@
 'use client';
+import WorkConnection from './WorkConnection';
 import {useEffect,useRef,useState} from 'react';
 import {byteOperation} from '@/lib/core-labs.mjs';
 type Operation='add'|'left'|'right'|'not';
@@ -34,5 +35,5 @@ export default function ByteLab({paused,onStatus}:{paused:boolean;onStatus:(text
   <div className="byte-clock"><label>Operation<select aria-label="Byte operation" value={operation} onChange={e=>{setOperation(e.target.value as Operation);setMessage('Click Clock to apply the selected operation.');}}>{Object.entries(operationName).map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label><button className="clock-button" onClick={clock}>Clock <span>↗</span></button></div>
   <canvas ref={canvas} role="img" aria-label={`Serial waveform for ${value.toString(2).padStart(8,'0')}, carry ${carry}`}/><p className="core-hint" aria-live="polite">{message}</p>
   <details className="core-settings"><summary>Controls & keyboard alternatives</summary><div className="byte-readout"><label>Decimal <input aria-label="Byte decimal" type="number" min="0" max="255" value={value} onChange={e=>{const next=Math.max(0,Math.min(255,Math.trunc(Number(e.target.value)||0)));update(next,current.current^next);setMessage(`Register set to ${next}.`);}}/></label><button onClick={()=>{update(42,current.current^42);setMessage('Register reset to 42.');}}>Reset byte</button></div><p className="core-note">Tap a bit or drag across several. Tab to a bit; Space or Enter flips it. + clocks the selected operation; R resets. Weights sum to the decimal value. Shifts expose the discarded bit as carry; ADD 1 wraps 255 to 0. A real byte register model, not a CPU emulator.</p></details>
- </div>;
+ <WorkConnection topic="byte" event={tick>0?`You made ${value.toString(2).padStart(8,'0')} = ${value}. Carry: ${carry}.`:undefined} compact/></div>;
 }
